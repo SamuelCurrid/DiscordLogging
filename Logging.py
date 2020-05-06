@@ -1,3 +1,6 @@
+# TODO: Implementation
+# IDEA: Track which invite a user joined off of
+
 import discord
 from discord.ext import commands
 
@@ -123,7 +126,7 @@ class Logging(commands.Cog):
 	async def on_member_join(self, member):
 		"""
 		Sends a logging message containing
-		the name, 
+		the name, avatar, id, join position, account age
 		:param member:
 		:return:
 		"""
@@ -131,56 +134,141 @@ class Logging(commands.Cog):
 
 	@commands.Cog.listener()
 	async def on_member_remove(self, member):
+		"""
+		Sends a logging message containing
+		the name, avatar, id, time spent on the server
+		:param member:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_member_update(self, before, after):
+		"""
+		Sends a logging message containing
+		the property of the member updated before and after
+		:param before:
+		:param after:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_user_update(self, before, after):
+		"""
+		Sends a logging message containing
+		the property of the user updated before and after
+		:param before:
+		:param after:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_guild_update(self, before, after):
+		"""
+		Sends a logging message containing
+		the property of the guild updated before and after
+		:param before:
+		:param after:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_guild_role_create(self, role):
+		"""
+		Sends a logging message containing
+		the id, name, color, mentionable, and hoisted properties of the role
+		:param role:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_guild_role_delete(self, role):
+		"""
+		Sends a logging message containing
+		the id, name, color, mentionable, and hoisted properties of the role
+		:param role:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_guild_role_update(self, before, after):
+		"""
+		Sends a logging message containing
+		the property of the role updated before and after
+		:param before:
+		:param after:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_guild_emojis_update(self, guild, before, after):
+		"""
+		Sends a logging message containing
+		the id, name, and picture of the emoji
+		:param guild:
+		:param before:
+		:param after:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_voice_state_update(self, member, before, after):
+		"""
+		Sends a logging message containing
+		the id, name, and updated voice properties of the member
+		:param member:
+		:param before:
+		:param after:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_member_ban(self, guild, user):
+		"""
+		Sends a logging message containing
+		the id, name, and join date of the member
+		:param guild:
+		:param user:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_member_unban(self, guild, user):
+		"""
+		Sends a logging message containing
+		the id and name of the member
+		:param guild:
+		:param user:
+		:return:
+		"""
 		return
 
 	@commands.Cog.listener()
 	async def on_invite_create(self, invite):
+		"""
+		Sends a logging message containing
+		the invite code, inviter name, inviter id, expiration time
+		:param invite:
+		:return:
+		"""
+
 		return
 
 	@commands.Cog.listener()
 	async def on_invite_delete(self, invite):
-		return
-
-	@commands.Cog.listener()
-	async def on_group_join(self, channel, user):
+		"""
+		Sends a logging message containing
+		the invite code, inviter name, and expiration time
+		:param invite:
+		:return:
+		"""
 		return

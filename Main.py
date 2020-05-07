@@ -1,7 +1,12 @@
 import discord
+import json
+import os
 from discord.ext import commands
 
+from Logging import Logging
+
 gompei = commands.Bot(command_prefix=".")
+gompei.add_cog(Logging(gompei))
 
 @gompei.event
 async def on_ready():
@@ -10,4 +15,4 @@ async def on_ready():
 	"""
 	print("Logged on as {0}".format(gompei.user))
 
-gompei.run("Njc0NjU2NTI5MzI4MzczNzcw.XoO-nA.rD0TxN2fI9kSTf1IinKD-NG6BHs")
+gompei.run(json.load(open(os.path.join("config", "tokens.json")))["token"])
